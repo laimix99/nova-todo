@@ -1,5 +1,9 @@
+<script lang="ts" setup>
+const { todos } = useTodo();
+</script>
+
 <template>
   <div>
-    <NuxtWelcome />
+    <pre>{{ todos }}</pre>
   </div>
 </template>
