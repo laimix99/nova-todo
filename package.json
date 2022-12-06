@@ -8,6 +8,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@vueuse/core": "^9.6.0",
+    "@vueuse/nuxt": "^9.6.0",
     "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "@vueuse/components": "^9.6.0",
+    "materialize-css": "^1.0.0-rc.2"
   }
 }
