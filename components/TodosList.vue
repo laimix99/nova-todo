@@ -11,9 +11,9 @@ const todosLocal = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div style="width: 500px">
     <!-- header -->
-    <span>{{ props.status }}</span>
+    <span style="font-size: 20px">{{ props.status }}</span>
     <!-- items -->
     <TodoItem
       v-for="t in todosLocal"

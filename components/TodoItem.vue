@@ -7,11 +7,10 @@ const { removeTodo, editTodo, completeTodo, undoTodo } = useTodo();
 </script>
 
 <template>
-  <div class="todo-item">
-    <InputText v-model="item.name" />
+  <div class="todo-item grey lighten-4">
+    <InputText v-model="item.name" :status="item.status" />
     <InputDate v-model="item.deadline" />
     <InputTags v-model="item.tags" />
-    <!-- footer -->
     <div
       style="
         display: flex;
@@ -20,14 +19,24 @@ const { removeTodo, editTodo, completeTodo, undoTodo } = useTodo();
         width: 100%;
       "
     >
-      <button v-if="item.status === 'new'" @click="completeTodo(item.id)">
+      <button
+        v-if="item.status === 'new'"
+        class="btn waves-effect waves-light"
+        @click="completeTodo(item.id)"
+      >
         Complete
       </button>
-      <button v-if="item.status === 'completed'" @click="undoTodo(item.id)">
+      <button
+        v-if="item.status === 'completed'"
+        class="btn waves-effect waves-light"
+        @click="undoTodo(item.id)"
+      >
         Undo
       </button>
 
-      <button @click="removeTodo(item.id)">Remove</button>
+      <button class="btn waves-effect waves-light" @click="removeTodo(item.id)">
+        Remove
+      </button>
     </div>
   </div>
 </template>
@@ -38,7 +47,8 @@ const { removeTodo, editTodo, completeTodo, undoTodo } = useTodo();
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid #333;
+  /* border: 1px solid #333; */
   padding: 8px;
+  border-radius: 8px;
 }
 </style>

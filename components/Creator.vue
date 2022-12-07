@@ -30,8 +30,16 @@ function cancel() {
       <InputTags v-model="newTodo.tags" />
     </template>
     <!-- <pre>{{ newTodo }}</pre> -->
-    <button @click="create()">Create</button>
-    <button @click="cancel()">Cancel</button>
+    <button
+      class="btn waves-effect waves-light"
+      style="margin-right: 10px"
+      @click="create()"
+    >
+      Create
+    </button>
+    <button class="btn waves-effect waves-light" @click="cancel()">
+      Cancel
+    </button>
   </div>
 </template>
 
